@@ -7,72 +7,96 @@
   <body>
 <header class="header">
   <nav class="main-navigation">
-    <a class="navigation-logo">
-      <img src="http://placehold.it" width="160" height="65"  alt="Логотип Nerds">
+    <a href="index.html" class="navigation-logo"  tabindex="0">
+      <img src="img/nerds-logo.svg" width="160" height="65"  alt="Логотип Nerds">
     </a> 
     <ul class="navigation-site">  
-      <li><a href="#">Студия</a></li>
-      <li><a href="#">Клиенты</a></li>
-      <li><a href="#">Магазин</a></li>
-      <li><a href="#">Контакты</a></li>
+      <li><a href="#" tabindex="0">Студия</a></li>
+      <li><a href="#" tabindex="0">Клиенты</a></li>
+      <li><a href="#" tabindex="-1">Магазин</a></li>
+      <li><a href="#" tabindex="0">Контакты</a></li>
     </ul>
     <ul class="navigation-basket">
-      <li class="navigation-transition"><a href="#"></a>Корзина</li>
+      <li class="navigation-transition"><img src="img/cart-icon.svg" alt="корзина"> <a href="#" tabindex="0"></a>Корзина</li>
     </ul>
     <h1 class="navigation-list">Магазин готовых шаблонов</h1>
   </nav>
 </header>
 <main class="catalog">
-    <span class="filter-catalog">
-        <h2 class="visually-hidden">Фильтр товаров</h2> <!--Скрытый заголовок для читалки-->
-        <!-- <ul class="filter-catalog_grid">
-           <li><b>Сетка</b> </li>
-           <li>Адаптивная
-               Фиксированная    
-               Резиновая
-            </li>
-           </ul>
-           <ul class="filter-catalog_features">
-               <li><b>Особенности:</b></li>
-                 <li>Слайдер
-                    Блок преимуществ     
-                    Новости
-                    Галерея
-                    Корзина</li>
-           </ul> -->
-        </span>
+    <div class="filter-catalog">
+        <h2 class="visually-hidden">Фильтр товаров</h2> 
+        <!--Скрытый заголовок для читалки-->
+         <form action="#" method="GET">
+        <fieldset>
+          <legend>Сетка:</legend>
+          <input type="radio" name="grid" id="Adaptive" checked  tabindex="0">
+          <label for="Adaptive">Адаптивная</label>
+          <input type="radio" name="grid" id="Fixed" tabindex="0">
+          <label for="Fixed">Фиксированая</label>
+          <input type="radio" name="grid" id="Rubber" tabindex="0">
+          <label for="Rubber">Резиновая</label>
+        </fieldset>
+          <fieldset>
+          <legend>ОСОБЕННОСТИ:</legend>
+          <input type="checkbox" name="Slider" id="Slider" checked tabindex="0">
+          <label for="Slider">Слайдер</label>
+          <input type="checkbox" name="advantages" id="advantages" tabindex="0">
+          <label for="advantages">Блок преимуществ</label>
+          <input type="checkbox" name="news" id="news" checked tabindex="0">
+          <label for="news">Новости</label>
+          <input type="checkbox" name="Gallery" id="Gallery" tabindex="0">
+          <label for="Gallery">Галерея</label>
+          <input type="checkbox" name="Basket" id="Basket" tabindex="0">
+          <label for="Basket">Корзина</label>
+         <input type="submit" value="Показать" tabindex="0">
+        </fieldset>
+         </form>
+          </div>
         <section class="catalog-product">
             <h2  class="visually-hidden">Асортимент товаров</h2>
            <div class="catalog">
                <ul class="catalog-list">
-                <li><img src="http://placehold.it"  width="360" height="576" alt="Сайт Sedona"></li>   
-                <li><img src="http://placehold.it"  width="360" height="576" alt="Приложение Pinc"></li>   
-                <li><img src="http://placehold.it"  width="360" height="576" alt="Барбершоп Borodinski"> </li>   
-                <li><img src="http://placehold.it"  width="360" height="576" alt="Мфгфзин Mishka"></li>   
-                <li><img src="http://placehold.it"  width="360" height="576" alt="Сайт для учащихся"></li>   
-                <li><img src="http://placehold.it"  width="360" height="576" alt="Сайт кваса"></li>  
+                <li><img src="img/img-sedona.jpg.jpg"  width="360" height="576" alt="Сайт Sedona" tabindex="0"></li>   
+                <li><img src="img/img-pink.jpg.jpg"  width="360" height="576" alt="Приложение Pinc" tabindex="0"></li>   
+                <li><img src="img/img-barbershop.jpg.jpg"  width="360" height="576" alt="Барбершоп Borodinski" tabindex="0"> </li>   
+                <li><img src="img/img-mishka.jpg.jpg"  width="360" height="576" alt="Мфгфзин Mishka" tabindex="0"></li>   
+                <li><img src="img/img-aplus.jpg.jpg"  width="360" height="576" alt="Сайт для учащихся" tabindex="0"></li>   
+                <li><img src="img/img-kvast.jpg.jpg"  width="360" height="576" alt="Сайт кваса" tabindex="0"></li>  
                 </ul>
            </div> 
            <nav class="pagination">
             <ul class="pagination-list">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">следующая</a></li>
+                <li><a href="#" tabindex="0">1</a></li>
+                <li><a href="#" tabindex="0">2</a></li>
+                <li><a href="#" tabindex="0">3</a></li>
+                <li><a href="#" tabindex="0">следующая</a></li>
             </ul>
            </nav>
         </section>
     </main>  
     <footer class="footer">
+          <div class="adres">
+            <h2 class="visually-hidden">Как до нас добраться.</h2> 
+            <img src="img/map.png" alt="карта">   
+            <!--Скрытый заголовок для читалки-->
+                    <address class="address nerds">
+                     <p class="headline">NЁRDS DESIGN STUDIO</p>
+                      <p>191186, Санкт-Петербург,</p>
+                      <p>ул. Б. Конюшенная, д. 19/8</p>
+                      <p>тел. +7 (812) 275-75-75</p>
+                      <button tabindex="0">Напишите нам</button>
+                    </address>
+                  </div>
+    
             <div class="footer-container">
               <ul class="footer-list">
-                <li><a class="footer-social" href="#">Вконтакте</a></li>
-                <li><a class="footer-social" href="#">Фейсбук</a></li>
-                <li><a class="footer-social" href="#">Инстаграм</a></li>
+                  <li><a class="footer-social" href="https://vk.com"><img src="img/vk-icon.svg" alt="вконтакте" tabindex="0"></a></li>
+                  <li><a class="footer-social" href="https://www.facebook.com"><img src="img/fb-icon.svg" alt="фейсбук" tabindex="0"></a></li>
+                  <li><a class="footer-social" href="https://www.instagram.com/"><img src="img/insta-icon.svg" alt="инстаграм" tabindex="0"></a></li>
               </ul>
               <b>Давайте дружить, это выгодно!</b>
               <p>Скидка 10% для друзей из социальных сетей.</p>
             </div>
-            </footer>
+      </footer>
     </body>    
 </html>                                     
