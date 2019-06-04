@@ -1,0 +1,536 @@
+    body {
+margin: 0;
+padding: 0;
+   
+font-family: 'Roboto', sans-serif;
+font-size: 16px;
+line-height: 18px;
+font-weight: 400;
+color: #000000;
+text-transform: uppercase;
+}
+     /* цвет фона */
+    .backgroundpicture {
+background-color: #eeeeee;
+  }
+a {
+text-decoration: none;
+color: #000000;
+}
+.header {
+font-weight: 500;
+line-height: 30px;
+   
+}
+     /* стили для ссылок */
+ul {
+list-style-type: none;   
+}
+.navigation-site a:hover,
+.navigation-site a:focus {
+outline: none !important;
+color: #fb565a;
+text-decoration: none; 
+}
+.navigation-site a:active {
+opacity: 0.3;
+color: #000000;
+text-transform: uppercase;
+text-decoration: none;
+}
+.navigation-logo:hover {
+opacity: 0.8;
+}
+.navigation-logo:active {
+ opacity: 0.3;
+}
+/* Слайдер */
+.slider h3 {
+color: #000000;
+font-size: 55px;
+font-weight: 500;
+line-height: 55px;
+}
+.slider p {
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: #283136;
+}             
+.slider button {
+color: #ffffff;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 18px;
+  
+width: 240px;
+height: 50px;
+background-color: #fb565a;
+}
+.slider button:hover {
+    background-color: #e74246;
+}
+.slider button:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    background-color: #d7373b;
+}
+.slider button:active:not(:empty) span {
+    opacity: 0.3;
+}
+
+
+/* Сервисы */
+.services h3 {
+font-size: 24px;
+font-weight: 700;
+line-height: 30px;
+text-transform: uppercase;
+color: #000000;
+}
+.services p {
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+padding-left: 1px;
+white-space: pre;
+}
+.services-list button {
+width: 160px;
+height: 50px;
+color: #ffffff;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 18px;
+}
+.services-site button {
+    background-color: #fb565a;
+}
+.services-site button:hover {
+    background-color: #e74246;
+}
+.services-site button:active{
+    box-shadow: inset 0 3px 0 rgba(1, 0, 0, 0.651);
+    background-color: #d7373b;
+}
+.services-site button:active:not(:empty) span {
+    opacity: 0.3;
+}
+button {
+    border: none;
+}
+.services-applications button {
+    background-color: #00ca74;
+}
+.services-applications button:hover {
+    background-color: #00bc6c;
+}
+.services-applications button:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    background-color: #00aa62;    
+}
+.services-applications button:active:not(:empty) span {
+    opacity: 0.3;
+}
+.services-presentations button {
+    background-color: #efc84a;
+}
+.services-presentations button:hover {
+    background-color: #eab534;
+}
+.services-presentations button:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+background-color: #e5a722;
+}
+.services-presentations button:active:not(:empty) span {
+    opacity: 0.3;
+}
+.involved {
+    border-bottom: 2px solid red;
+     width: 83px;
+    }
+.advertisang-headline {
+font-size: 45px;
+font-weight: 500;
+line-height: 45px;
+color: #000000;
+white-space: pre;
+}
+.advertising-text {
+    margin: 35PX;
+color: #283136;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+white-space: pre;
+}
+.opportunities ul li:before {
+    width: 200px;;
+    content:  "___";
+    position: relative;
+    left:     -5px;
+    top: -8px;
+    color: red;
+}
+.opportunities li {
+    color: #283136;
+font-size: 16px;
+font-weight: 400;
+line-height: 38px;
+}
+.opportunities h3 {
+    color: #000000;
+font-family: "Roboto - Bold";
+font-weight: 700;
+text-transform: uppercase;
+white-space: pre;
+position: relative;
+left: 35px;
+}
+/* Табличка */
+table {
+    width: 344px;
+    height: 160px;
+    font-family: Roboto;
+    padding-bottom: 26px;
+    caption-side: top;
+    text-align: left;
+}
+.statistics caption {
+color: #000000;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+text-transform: uppercase;
+}
+.interest td {
+color: #000000;
+font-size: 45px;
+font-weight: 700;
+line-height: 10.06px;
+padding-bottom: 27px;
+padding-top: 49px;
+}
+.indicators td {
+    color: #283136;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-bottom: 76px;
+    padding-top: 27px;
+}
+
+/* Партнеры */
+.partners {
+    text-align: center;
+    border-top:  2px solid #eeeeee;
+    border-bottom:  2px solid #eeeeee;
+     width: 1160px;
+     padding-top: 46px;
+     padding-bottom: 44px;
+     margin-bottom: 80px;    
+}
+ .partners a:first-child:link {
+    opacity: 0.2;
+ }
+ .partners a:first-child:hover {
+     opacity: 1;
+ }
+ .partners a:first-child:active {
+    opacity: 0.1;
+ }
+ .partners a:first-child+a:link{
+    opacity: 0.2;
+    
+ }
+ .partners a:first-child+a:hover {
+    opacity: 1;
+    
+ }
+ .partners a:first-child+a:active {
+    opacity: 0.1;
+    
+ }
+ .partners a:first-child+a+a:link {
+    opacity: 0.2;
+ }
+ .partners a:first-child+a+a:hover {
+    opacity: 1;
+ }
+ .partners a:first-child+a+a:active {
+    opacity: 0.1;
+ }
+ .partners a:first-child+a+a+a:link {
+    opacity: 0.2;
+ }
+ .partners a:first-child+a+a+a:hover {
+    opacity: 1;
+ }
+ .partners a:first-child+a+a+a:active {
+    opacity: 0.1;
+ }   
+
+
+.headline {
+    color: #000000;
+font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+text-transform: uppercase;
+}
+.addressnerds button {
+    width: 219px;
+height: 50px;
+    color: #ffffff;
+font-size: 16px;
+font-weight: 500;
+line-height: 18px;
+text-transform: uppercase;
+background-color: #fb565a;
+}
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); 
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+/* Всплывает попаб адрес */
+.adres:hover ~ address{
+    display: block;
+}
+address {
+    width: 319px;
+    height: 308px;
+    display: none;
+    background-color:#ffffff;
+}
+/* cocial   ДОРАБОТАТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1*/
+.footer-list li a img{ 
+   background-color: #e1e1e1;
+  outline: 0;
+}
+
+
+.footer-social-vk img {
+    padding-top: 32px;
+    padding-right: 26px;
+    padding-bottom: 32px;
+    padding-left: 27px;
+}
+.footer-social-fb img {
+    padding-top: 28px;
+    padding-right: 33px;
+     padding-bottom: 29px;               
+    padding-left: 34px;
+}
+.footer-social-insta img {
+    padding-top: 29px;
+    padding-right: 29px;
+    padding-bottom: 29px;
+    padding-left: 29px;
+}
+.footer-list li a img:hover {
+    background-color: #e74246;
+}
+.footer-list li a img:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+background-color: #d7373b;
+}
+.good b {
+font-size: 36px;
+font-weight: 700;
+line-height: 36px;
+}
+.good p {
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+}
+.about-us {
+    border-top:  2px solid #eeeeee;
+    width: 1160px;
+}
+.navigation-list {
+    font-size: 55px;
+font-weight: 500;
+line-height: 55px;
+text-align: center;
+}
+.main-navigation {
+    background-color: #eeeeee;
+}
+fieldset {
+    border: none;
+}
+legend {
+    font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+text-transform: uppercase;
+}
+ form label {
+color: #283136;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+} 
+ input[type="submit"] {
+font-size: 16px;
+font-weight: 500;
+line-height: 18px;
+background-color: #eeeeee;
+border: none;
+width: 260px;
+height: 50px;
+} 
+/* радиокнопка и чекбокс*/
+input[type="radio"] {
+    width: 25px;
+    height: 25px;
+    background-color: #4d4d4d;
+    opacity: 0.4;
+}
+input[type="checkbox"] {
+    width: 27px;
+    height: 23px;
+    background-color: #4d4d4d;
+    opacity: 0.4;
+}
+label {
+    color: #283136;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+}
+input[type="radio"]:hover {
+    background-color: #d4d;
+}
+
+
+.sedona,
+.pink,
+.Borodinski,
+.MISHKA,
+.aplus,
+.kvas {
+background-color: #eeeeee;
+border: none;
+width: 360px;
+height: 231px;
+text-align: center;
+}
+.sedona h3,
+.pink h3,
+.Borodinski h3,
+.MISHKA h3,
+.aplus h3,
+.kvas h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding-top: 35px;
+}
+.sedona p,
+.pink p,
+.Borodinski p,
+.MISHKA p,
+.aplus p,
+.kvas p{
+color: #666666;
+font-size: 16px;
+font-weight: 400;
+line-height: 18px;
+white-space: pre;
+padding-bottom: 30px;
+}
+
+      /* кнопки папабав */
+button[type="button"] {
+    color: #ffffff;
+font-size: 16px;
+font-weight: 500;
+line-height: 18px;
+text-transform: uppercase;
+background-color: #fb565a;
+width: 200px;
+height: 50px;
+margin-bottom: 30px;
+}
+button[type="button"]:hover {
+    background-color: #e74246;
+}
+button[type="button"]:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+background-color: #d7373b;
+}
+ .sedona:hover h3,
+.pink:hover h3,
+.Borodinski:hover h3,
+.MISHKA:hover h3,
+.aplus:hover h3, 
+.kvas:hover h3{
+    color: #fb565a;
+}
+.sedona:active h3,
+.pink:active h3,
+.Borodinski:active h3,
+.MISHKA:active h3,
+.aplus:active h3, 
+.kvas:active h3{
+    opacity: 0.3;
+color: #000000;
+}
+
+/* кнопки страниц */
+.pagination li:first-child {
+    width: 50px;
+height: 50px;
+border: 3px solid #dbdbdb;
+text-align: center;
+    line-height: 50px;
+    margin: 11px;
+}
+
+.pagination li:first-child +li,
+.pagination li:first-child +li +li {
+    width: 50px;
+    height: 50px;
+    background-color: #eeeeee;
+    text-align: center;
+    line-height: 50px;
+    margin: 11px;
+}
+.pagination li:first-child+li+li+li {
+width: 260px;
+height: 50px;
+background-color: #eeeeee;
+text-align: center;
+line-height: 50px;
+margin: 11px;
+}
+.pagination li:first-child +li:hover,
+.pagination li:first-child +li +li:hover,
+.pagination li:first-child+li+li+li:hover  {
+    background-color: #dfdfdf;
+}
+.pagination li:first-child +li:active,
+.pagination li:first-child +li +li:active,
+.pagination li:first-child+li+li+li:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+background-color: #d5d5d5;
+color: #000000;
+} 
+.pagination li:first-child +li:active:not(:empty) span,
+.pagination li:first-child +li +li:active:not(:empty) span,
+.pagination li:first-child+li+li+li:active:not(:empty) span {
+    opacity: 0.3;
+}
+   
+

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Дизайн-студия Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 <header class="header">
@@ -13,11 +15,9 @@
     <ul class="navigation-site">  
       <li><a href="#" tabindex="0">Студия</a></li>
       <li><a href="#" tabindex="0">Клиенты</a></li>
-      <li><a href="#" tabindex="-1">Магазин</a></li>
+      <li class="involved"><a href="#" tabindex="-1">Магазин</a></li>
       <li><a href="#" tabindex="0">Контакты</a></li>
-    </ul>
-    <ul class="navigation-basket">
-      <li class="navigation-transition"><img src="img/cart-icon.svg" alt="корзина"> <a href="#" tabindex="0"></a>Корзина</li>
+      <li><img src="img/cart-icon.svg" alt="корзина"><a href="#" tabindex="0">Корзина</a></li>
     </ul>
     <h1 class="navigation-list">Магазин готовых шаблонов</h1>
   </nav>
@@ -26,29 +26,33 @@
     <div class="filter-catalog">
         <h2 class="visually-hidden">Фильтр товаров</h2> 
         <!--Скрытый заголовок для читалки-->
-         <form action="#" method="GET">
+         <form  action="#" method="GET">  
         <fieldset>
           <legend>Сетка:</legend>
-          <input type="radio" name="grid" id="Adaptive" checked  tabindex="0">
-          <label for="Adaptive">Адаптивная</label>
-          <input type="radio" name="grid" id="Fixed" tabindex="0">
-          <label for="Fixed">Фиксированая</label>
-          <input type="radio" name="grid" id="Rubber" tabindex="0">
-          <label for="Rubber">Резиновая</label>
+          <ul class="filter"> 
+          <li><input type="radio" name="grid" id="Adaptive" checked  tabindex="0">
+          <label for="Adaptive">Адаптивная</label></li>
+        <li><input type="radio" name="grid" id="Fixed" tabindex="0">
+          <label for="Fixed">Фиксированая</label></li>
+        <li><input type="radio" name="grid" id="Rubber" tabindex="0">
+          <label for="Rubber">Резиновая</label></li>
+        </ul>
         </fieldset>
           <fieldset>
           <legend>ОСОБЕННОСТИ:</legend>
-          <input type="checkbox" name="Slider" id="Slider" checked tabindex="0">
-          <label for="Slider">Слайдер</label>
-          <input type="checkbox" name="advantages" id="advantages" tabindex="0">
-          <label for="advantages">Блок преимуществ</label>
-          <input type="checkbox" name="news" id="news" checked tabindex="0">
-          <label for="news">Новости</label>
-          <input type="checkbox" name="Gallery" id="Gallery" tabindex="0">
-          <label for="Gallery">Галерея</label>
-          <input type="checkbox" name="Basket" id="Basket" tabindex="0">
-          <label for="Basket">Корзина</label>
-         <input type="submit" value="Показать" tabindex="0">
+          <ul>
+          <li><input type="checkbox" name="Slider" id="Slider" checked tabindex="0">
+          <label for="Slider">Слайдер</label></li>
+        <li><input type="checkbox" name="advantages" id="advantages" tabindex="0">
+          <label for="advantages">Блок преимуществ</label></li>
+        <li><input type="checkbox" name="news" id="news" checked tabindex="0">
+          <label for="news">Новости</label></li>
+        <li><input type="checkbox" name="Gallery" id="Gallery" tabindex="0">
+          <label for="Gallery">Галерея</label></li>
+        <li><input type="checkbox" name="Basket" id="Basket" tabindex="0">
+          <label for="Basket">Корзина</label></li>
+        <li><input type="submit" value="Показать" tabindex="0"></li>
+        </ul>
         </fieldset>
          </form>
           </div>
@@ -56,47 +60,84 @@
             <h2  class="visually-hidden">Асортимент товаров</h2>
            <div class="catalog">
                <ul class="catalog-list">
-                <li><img src="img/img-sedona.jpg.jpg"  width="360" height="576" alt="Сайт Sedona" tabindex="0"></li>   
-                <li><img src="img/img-pink.jpg.jpg"  width="360" height="576" alt="Приложение Pinc" tabindex="0"></li>   
-                <li><img src="img/img-barbershop.jpg.jpg"  width="360" height="576" alt="Барбершоп Borodinski" tabindex="0"> </li>   
-                <li><img src="img/img-mishka.jpg.jpg"  width="360" height="576" alt="Мфгфзин Mishka" tabindex="0"></li>   
-                <li><img src="img/img-aplus.jpg.jpg"  width="360" height="576" alt="Сайт для учащихся" tabindex="0"></li>   
-                <li><img src="img/img-kvast.jpg.jpg"  width="360" height="576" alt="Сайт кваса" tabindex="0"></li>  
+                <li><img src="img/img-sedona.jpg.jpg"  width="360" height="576" alt="Сайт Sedona для туристов" tabindex="0"></li>  
+                <div class="sedona">
+                  <h3>Sedona</h3>
+                  <p>Информационный сайт
+для туристов</p>
+                  <button type="button" tabindex="0">9 900 руб.</button>
+                  </div> 
+                <li><img src="img/img-pink.jpg.jpg"  width="360" height="576" alt="Приложение Pinc для iOS и Android" tabindex="0"></li>  
+                <div class="pink">
+                   <h3>Pink App</h3>
+                   <p>Продуктовый лендинг
+приложения для iOS и Android</p>
+                   <button type="button" tabindex="0">9 900 руб.</button>
+                </div> 
+                <li><img src="img/img-barbershop.jpg.jpg"  width="360" height="576" alt="Барбершоп Borodinski" tabindex="0"> </li>  
+                <div class="Borodinski">
+                    <h3>Barbershop</h3>
+                    <p>Сайт салона красоты.
+Для мужчин, да.</p>
+                    <button type="button" tabindex="0">9 900 руб.</button>
+                 </div>  
+                <li><img src="img/img-mishka.jpg.jpg"  width="360" height="576" alt="Магазин вязаных игрушек Mishka" tabindex="0"></li> 
+                <div class="MISHKA">
+                    <h3>MISHKA</h3>
+                    <p>Интернет-магазин
+вязаных игрушек</p>
+                    <button type="button" tabindex="0">9 900 руб.</button>
+                 </div>  
+                <li><img src="img/img-aplus.jpg.jpg"  width="360" height="576" alt="Сайт для лендинг курсов повышения квалификации" tabindex="0"></li>
+                <div class="aplus">
+                    <h3>A Plus</h3>
+                    <p>Лендинг курсов повышения 
+квалификации</p>
+                    <button type="button" tabindex="0">9 900 руб.</button>
+                 </div>    
+                <li><img src="img/img-kvast.jpg.jpg"  width="360" height="576" alt="Сайт крафтового кваса" tabindex="0"></li>  
+                <div class="kvas">
+                    <h3>КВАСТ</h3>
+                    <p>Промо-сайт производителя
+крафтового кваса</p>
+                    <button type="button" tabindex="0">9 900 руб.</button>
+                 </div> 
                 </ul>
            </div> 
            <nav class="pagination">
             <ul class="pagination-list">
-                <li><a href="#" tabindex="0">1</a></li>
-                <li><a href="#" tabindex="0">2</a></li>
-                <li><a href="#" tabindex="0">3</a></li>
-                <li><a href="#" tabindex="0">следующая</a></li>
+                <li><a href="#" tabindex="0"><span>1</span></a></li>
+                <li><a href="#" tabindex="0"><span>2</span></a></li>
+                <li><a href="#" tabindex="0"><span>3</span></a></li>
+                <li><a href="#" tabindex="0"><span>следующая</span></a></li>
             </ul>
            </nav>
         </section>
     </main>  
     <footer class="footer">
-          <div class="adres">
-            <h2 class="visually-hidden">Как до нас добраться.</h2> 
-            <img src="img/map.png" alt="карта">   
-            <!--Скрытый заголовок для читалки-->
-                    <address class="address nerds">
-                     <p class="headline">NЁRDS DESIGN STUDIO</p>
-                      <p>191186, Санкт-Петербург,</p>
-                      <p>ул. Б. Конюшенная, д. 19/8</p>
-                      <p>тел. +7 (812) 275-75-75</p>
-                      <button tabindex="0">Напишите нам</button>
-                    </address>
-                  </div>
-    
-            <div class="footer-container">
-              <ul class="footer-list">
-                  <li><a class="footer-social" href="https://vk.com"><img src="img/vk-icon.svg" alt="вконтакте" tabindex="0"></a></li>
-                  <li><a class="footer-social" href="https://www.facebook.com"><img src="img/fb-icon.svg" alt="фейсбук" tabindex="0"></a></li>
-                  <li><a class="footer-social" href="https://www.instagram.com/"><img src="img/insta-icon.svg" alt="инстаграм" tabindex="0"></a></li>
-              </ul>
-              <b>Давайте дружить, это выгодно!</b>
-              <p>Скидка 10% для друзей из социальных сетей.</p>
-            </div>
+        <div class="adres">
+          <h2 class="visually-hidden">Как до нас добраться.</h2>
+          <!--Скрытый заголовок для читалки-->
+          <img src="img/map.png" alt="карта" width: 1440px; height: 416px;>
+        </div>
+          <address class="addressnerds">
+            <p class="headline">NЁRDS DESIGN STUDIO</p>
+            <p>191186, Санкт-Петербург,</p>
+            <p>ул. Б. Конюшенная, д. 19/8</p>
+            <p>тел. +7 (812) 275-75-75</p>
+            <button tabindex="0">Напишите нам</button>
+          </address>
+        <div class="footer-container">
+          <ul class="footer-list">
+            <li><a class="footer-social-vk" href="https://vk.com" tabindex="0"><span><img src="img/vk-icon.svg" alt="вконтакте" width: 26px; height: 15px;></span></a> </li>
+            <li><a class="footer-social-fb" href="https://www.facebook.com" tabindex="0"><span><img src="img/fb-icon.svg" alt="фейсбук"></span></a></li>
+            <li><a class="footer-social-insta" href="https://www.instagram.com/" tabindex="0"><span><img src="img/insta-icon.svg"  alt="инстаграм" width: 21px;  height: 21px;></span></a></li>
+          </ul>
+        </div>
+      <div class="good">
+          <b>Давайте дружить, это выгодно!</b>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </footer>
     </body>    
 </html>                                     
