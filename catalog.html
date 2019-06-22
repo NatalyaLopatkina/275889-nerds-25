@@ -163,28 +163,25 @@
     </div>
   </footer>
   <form id="modal" class="letter" action="#">
-      <fieldset>
-        <div class="cap">
-          <legend>Напишите нам</legend>
-          <a href="#close"></a>
-        </div>
-        <div class="fields">
-          <div>
-            <label for="surname">Ваше имя:</label>
-            <input type="text" name="surname" id="surname" placeholder="Имя Фамилия" pattern="[А-я\s]{1,30}">
-          </div>
-          <div>
-            <label for="email">Ваш e-mail:</label>
-            <input type="email" name="email" id="email" placeholder="email@example.com">
-          </div>
+    <fieldset>
+      <legend>Напишите нам <a href="#close"></a></legend>
+      <div class="fields">
+        <div>
+          <label for="surname">Ваше имя:</label>
+          <input type="text" name="surname" id="surname" placeholder="Имя Фамилия" pattern="[А-я\s]{1,30}">
         </div>
         <div>
-          <label for="text">Текст письма:</label>
-          <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
-          <input type="submit" value="ОТПРАВИТЬ">
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" name="email" id="email" placeholder="email@example.com">
         </div>
-      </fieldset>
-    </form>
+      </div>
+      <div>
+        <label for="text">Текст письма:</label>
+        <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
+        <input type="submit" value="ОТПРАВИТЬ">
+      </div>
+    </fieldset>
+  </form>
 </body>
 
 </html>

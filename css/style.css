@@ -663,7 +663,7 @@
         align-items: center;
         position: relative;
         bottom: 685px;
-       opacity: 0;
+        opacity: 0;
         pointer-events: none;
     }
 
@@ -672,7 +672,8 @@
         pointer-events: auto;
         opacity: 1;
     }
-    .letter > div {
+
+    .letter>div {
         display: flex;
     }
 
@@ -698,15 +699,16 @@
         font-size: 45px;
         font-weight: 500;
         line-height: 45px;
+        display: contents;
     }
 
-    .cap a {
+    .letter legend a {
         width: 0px;
         height: 0px;
         padding-right: 25px;
     }
 
-    .cap a::after {
+    .letter legend a::after {
         /*картинка крестик*/
         content: "";
         background-image: url(../img/close-cross.svg);
@@ -717,6 +719,7 @@
         opacity: 0.3;
         position: absolute;
         padding-top: 40px;
+        padding-left: 393px;
     }
 
     .cap {
@@ -725,11 +728,11 @@
         justify-content: space-between;
     }
 
-    .cap a:hover::after {
+    .letter legend a:hover::after {
         opacity: 2;
     }
 
-    .cap a:active::after {
+    .letter legend a:active::after {
         opacity: 0.1;
     }
 
