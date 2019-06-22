@@ -25,6 +25,8 @@
         </ul>
       </div>
     </nav>
+  </header>
+  <main>
     <div class="slider">
       <!-- СДАЙДЕР      СДАЙДЕР        СДАЙДЕР -->
       <div class="slide-one">
@@ -44,8 +46,6 @@
         <button type="button"><span>УЗНАТЬ БОЛЬШЕ</span></button>
       </div>
     </div>
-  </header>
-  <main>
     <section class="services">
       <h2 class="visually-hidden">Предлагаемые услуги</h2>
       <!--Скрытый заголовок для читалки-->
@@ -70,16 +70,11 @@
         </li>
       </ul>
     </section>
-    <div class="conteiner">
+    <div class="progress">
       <div class="opportunities">
-        <div>
-          <b>Мы — маленькая, но гордая</b>
-          <b>дизайн-студия из Краснодара.</b>
-        </div>
-        <div>
-          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет</p>
-          <p>превыше креатива. Работаем не покладая рук, как роботы.</p>
-        </div>
+        <p><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не
+          покладая рук, как роботы.</p>
         <div class="products">
           <h3>Выполняем заказы на разработку</h3>
           <ul>
@@ -109,64 +104,60 @@
       </div>
     </div>
     <div class="partners">
-      <div><a href="#"><img src="img/logo-1.png_copy.svg" alt="Сайт html academy"></a></div>
-      <div><a href="#"><img src="img/logo-2.png_copy.svg" alt="Барбершоп borodinski"></a></div>
-      <div><a href="#"><img src="img/logo-3.png_copy.svg" alt="Приложение pink"></a></div>
-      <div><a href="#"><img src="img/logo-4.png_copy.svg" alt="Сайт mishka"></a></div>
+      <ul>
+        <li><a href="#"><img src="img/logo-1.png_copy.svg" alt="html академия"></a></li>
+        <li><a href="#"><img src="img/logo-2.png_copy.svg" alt="сайт бородинский"></a></li>
+        <li><a href="#"><img src="img/logo-3.png_copy.svg" alt="сайт пинк"></a></li>
+        <li><a href="#"><img src="img/logo-4.png_copy.svg" alt="сайт мишка"></a></li>
+      </ul>
     </div>
-    <div class="maps">
-      <div class="adres">
-        <h2 class="visually-hidden">Как до нас добраться.</h2>
-        <b class="headline">NЁRDS DESIGN STUDIO</b>
-
-        <p>191186, Санкт-Петербург,
-          ул. Б. Конюшенная, д. 19/8</p>
-
-        <p>тел. +7 (812) 275-75-75</p>
+    <div class="map">
+      <div class="address">
+        <h2>NЁRDS DESIGN STUDIO</h2>
+        <p class="city">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <a class="phone" href="#">тел. +7 (812) 275-75-75</a>
         <a href="#modal">Напишите нам</a>
       </div>
     </div>
   </main>
   <footer class="footer">
-    <div class="footer-container">
-      <!-- 111111111111111111ПЕРЕДЕЛАТЬ111111111111111111 -->
-      <ul class="footer-list">
-        <li>
-          <a class="footer-social-vk" href="https://vk.com"></a>
-        </li>
-        <li>
-          <a class="footer-social-fb" href="https://www.facebook.com"></a>
-        </li>
-        <li>
-          <a class="footer-social-insta" href="https://www.instagram.com/"></a>
-        </li>
-      </ul>
-    </div>
-    <div class="good">
-      <b>Давайте дружить, это выгодно!</b>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
-    </div>
+    <ul class="social-list">
+      <li>
+        <a class="social-vk" href="https://vk.com"></a>
+      </li>
+      <li>
+        <a class="social-fb" href="https://www.facebook.com"></a>
+      </li>
+      <li>
+        <a class="social-insta" href="https://www.instagram.com/"></a>
+      </li>
+    </ul>
+    <p><b>Давайте дружить, это выгодно!</b>Скидка 10% для друзей из социальных сетей.</p>
   </footer>
-  <form id="modal" class="letter" action="#">
-    <fieldset>
-      <legend>Напишите нам <a href="#close"></a></legend>
-      <div class="fields">
-        <div>
-          <label for="surname">Ваше имя:</label>
-          <input type="text" name="surname" id="surname" placeholder="Имя Фамилия" pattern="[А-я\s]{1,30}">
+  <section>
+    <h2 class="visually-hidden ">Форма для заполнения письма</h2>
+    <form id="modal" class="letter" action="#" method="POST">
+      <fieldset>
+        <legend>Напишите нам <a href="#close"></a></legend>
+        <div class="fields">
+          <div>
+            <label for="surname">Ваше имя:</label>
+            <input type="text" name="surname" id="surname" placeholder="Имя Фамилия" pattern="[А-я\s]{1,30}">
+          </div>
+          <div>
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+          </div>
         </div>
         <div>
-          <label for="email">Ваш e-mail:</label>
-          <input type="email" name="email" id="email" placeholder="email@example.com">
+          <label for="text">Текст письма:</label>
+          <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
         </div>
-      </div>
-      <div>
-        <label for="text">Текст письма:</label>
-        <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
         <input type="submit" value="ОТПРАВИТЬ">
-      </div>
-    </fieldset>
-  </form>
+      </fieldset>
+    </form>
+  </section>
+
 </body>
 
 </html>
