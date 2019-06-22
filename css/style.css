@@ -355,13 +355,17 @@
         text-transform: uppercase;
     }
 
-    .adres button {
+    .adres a {
         width: 219px;
         height: 50px;
         color: #ffffff;
         font-weight: 500;
         text-transform: uppercase;
         background-color: #fb565a;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .visually-hidden {
@@ -377,11 +381,17 @@
 
     .maps {
         /*карта*/
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 60px;
         width: 1440px;
         height: 416px;
+        margin-left: auto;
+        margin-right: auto;
         background-image: url(../img/map.png);
+        background-repeat: no-repeat;
+        /**/
+        display: flex;
+        align-items: center;
+        padding-left: 140px;
     }
 
     .footer {
@@ -473,10 +483,6 @@
         text-transform: uppercase;
     }
 
-    form {
-        padding-top: 62px;
-    }
-
     form label {
         color: #283136;
         line-height: 20px;
@@ -486,13 +492,31 @@
         padding-left: 0px;
     }
 
-    form button {
+    form button span {
         font-size: 16px;
         font-weight: 500;
+    }
+
+    form button {
         background-color: #eeeeee;
         border: none;
         width: 260px;
         height: 50px;
+        padding: 0px;
+        outline: none;
+    }
+
+    form button:hover {
+        background-color: #dfdfdf;
+    }
+
+    form button:active {
+        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+        background-color: #d5d5d5;
+    }
+
+    form button:active span {
+        opacity: 0.3;
     }
 
     /* радиокнопка и чекбокс*/
@@ -526,6 +550,9 @@
         width: 360px;
         height: 231px;
         text-align: center;
+        position: relative;
+        top: 326px;
+        display: none;
     }
 
     .popab h3 {
@@ -538,7 +565,6 @@
 
     .popab p {
         color: #666666;
-        white-space: pre;
         padding-bottom: 30px;
     }
 
@@ -574,100 +600,196 @@
 
     /* кнопки страниц */
 
-    .pagination li:first-child {
-        width: 50px;
-        height: 50px;
-        border: 3px solid #dbdbdb;
-        text-align: center;
-        line-height: 50px;
-        margin: 11px;
+    .pagination {
+        width: 443px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0px;
+        padding-top: 60px;
     }
 
-    .pagination li:first-child+li, .pagination li:first-child+li+li {
-        width: 50px;
-        height: 50px;
-        background-color: #eeeeee;
-        text-align: center;
-        line-height: 50px;
-        margin: 11px;
-    }
-
-    .pagination li:first-child+li+li+li {
-        width: 260px;
-        height: 50px;
-        background-color: #eeeeee;
-        text-align: center;
-        line-height: 50px;
-        margin: 11px;
-    }
-
-    .pagination li:first-child+li:hover, .pagination li:first-child+li+li:hover, .pagination li:first-child+li+li+li:hover {
-        background-color: #dfdfdf;
-    }
-
-    .pagination li:first-child+li:active, .pagination li:first-child+li+li:active, .pagination li:first-child+li+li+li:active {
-        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
-        background-color: #d5d5d5;
+    .pagination a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        text-decoration: none;
         color: #000000;
     }
 
-    .pagination li:first-child+li:active:not(:empty) span, .pagination li:first-child+li+li:active:not(:empty) span, .pagination li:first-child+li+li+li:active:not(:empty) span {
+    .pagination li {
+        background-color: #eeeeee;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pagination li:first-child {
+        border: 3px solid #dbdbdb;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+    .pagination li:last-child {
+        width: 260px;
+    }
+
+    .pagination li:not(:first-child):hover {
+        background-color: #dfdfdf;
+    }
+
+    .pagination li:not(:first-child):active {
+        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+        background-color: #d5d5d5;
+    }
+
+    .pagination li:not(:first-child):active a {
         opacity: 0.3;
     }
 
     /* форма отправки письма   */
 
-    /* общий стиль формы */
-
     .letter {
-        width: 965px;
+        /* общий стиль формы */
+        width: 960px;
         height: 590px;
+        background-color: #ffffff;
         box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
-        position: absolute;
-        left: 25%;
-        top: 620%;
-        margin-left: -100px;
-        margin-top: -100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 685px;
+       opacity: 0;
+        pointer-events: none;
     }
 
-    /* заголовок */
+    .letter:target {
+        display: flex;
+        pointer-events: auto;
+        opacity: 1;
+    }
+    .letter > div {
+        display: flex;
+    }
 
     .letter fieldset {
+        /*основной контейнер*/
+        width: 771px;
+    }
+
+    .fields {
+        width: 760px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 49px;
+        padding-bottom: 36px;
+    }
+
+    .fields div:first-child {
+        margin-right: 40px;
+    }
+
+    .letter legend {
+        /*заголовок*/
         font-size: 45px;
         font-weight: 500;
         line-height: 45px;
-        padding-top: 73px;
-        padding-left: 101px;
-        padding-right: 453px;
+    }
+
+    .cap a {
+        width: 0px;
+        height: 0px;
+        padding-right: 25px;
+    }
+
+    .cap a::after {
+        /*картинка крестик*/
+        content: "";
+        background-image: url(../img/close-cross.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 21px;
+        height: 21px;
+        opacity: 0.3;
+        position: absolute;
+        padding-top: 40px;
+    }
+
+    .cap {
+        display: flex;
+        width: 769px;
+        justify-content: space-between;
+    }
+
+    .cap a:hover::after {
+        opacity: 2;
+    }
+
+    .cap a:active::after {
+        opacity: 0.1;
     }
 
     .letter label {
+        /*название*/
         font-weight: 700;
+        line-height: 18px;
     }
 
-    .letter ::placeholder {
-        color: #444444;
+    .letter [placeholder] {
+        /*примеры*/
+        opacity: 0.5;
+        padding-left: 15px;
     }
 
     .letter input[type="submit"] {
+        /*кнопка*/
+        font-weight: 500;
+        line-height: 18px;
+        color: #ffffff;
         width: 260px;
         height: 50px;
         background-color: #fb565a;
-        color: #ffffff;
+        border: none;
     }
 
-    .letter input:hover {
+    input[name="surname"], input[name="email"] {
+        /*поля ввода*/
+        width: 352px;
+        height: 50px;
+        border: 2px solid #d7dcde;
+        margin-top: 12px;
+    }
+
+    .letter input[type="text"]:hover, .letter input[type="email"]:hover, .letter textarea:hover {
+        /*изменение поля*/
         border: 2px solid #b4b9bb;
     }
 
-    .letter input:focus {
+    .letter input[type="text"]:focus, .letter input[type="email"]:focus, .letter textarea:focus {
+        /*изменение поля*/
         border: 2px solid #000000;
         color: #444444;
+        opacity: 2;
     }
 
     .letter input:invalid {
-        border: 2px solid #e74246;
+        /*невалидное значение*/
         color: #e74246;
+        border: 2px solid #e74246;
+    }
+
+    .letter textarea {
+        /*большое поле ввода*/
+        width: 761px;
+        height: 118px;
+        border: 2px solid #d7dcde;
+        margin-bottom: 47px;
+        margin-top: 12px;
+        padding-top: 14px;
     }
 
     .sorting {
@@ -676,6 +798,7 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        margin-bottom: 57px;
     }
 
     .sorting ul {
@@ -686,7 +809,7 @@
         justify-content: space-between;
     }
 
-    .sorting ul li {
+    .sorting ul li:not(:first-child) {
         font-size: 14px;
         text-transform: uppercase;
         opacity: 0.3;
@@ -711,13 +834,11 @@
         border-width: 10px;
         border-left-width: 5.5px;
         border-right-width: 5.5px;
-        border-top-color: #a6a6a6;
+        border-top-color: black;
         border-left-color: white;
         border-right-color: white;
         border-bottom-width: 0px;
         margin-right: 18px;
-        background-color: #a6a6a6;
-        opacity: 0.2;
         outline: none;
     }
 
@@ -810,14 +931,68 @@
     }
 
     .catalog-list li {
-        /*картинка сверху*/
         height: 616px;
-        background-image: url(../img/browser\ .svg );
-        background-repeat: no-repeat;
+        margin-bottom: 33px;
     }
 
-    .catalog-list li img {
-        padding-top: 40px;
+    .catalog-list li::before {
+        content: "";
+        background-image: url(../img/browser\ .svg );
+        width: 360px;
+        height: 40px;
+        position: absolute;
+        opacity: 0.12;
+    }
+
+    .catalog-list li:hover::before {
+        opacity: 2;
+    }
+
+    .catalog-list li:hover .popab {
+        display: block;
+    }
+
+    .sedona {
+        /*картинка сверху*/
+        background-image: url(../img/img-sedona.jpg.jpg);
+        background-repeat: no-repeat;
+        width: 360px;
+        background-position: bottom;
+    }
+
+    .pink {
+        background-image: url(../img/img-pink.jpg.jpg);
+        background-repeat: no-repeat;
+        width: 360px;
+        background-position: bottom;
+    }
+
+    .barbershop {
+        background-image: url(../img/img-barbershop.jpg.jpg);
+        background-repeat: no-repeat;
+        width: 360px;
+        background-position: bottom;
+    }
+
+    .mishka {
+        background-image: url(../img/img-mishka.jpg.jpg);
+        background-repeat: no-repeat;
+        width: 360px;
+        background-position: bottom;
+    }
+
+    .aplus {
+        background-image: url(../img/img-aplus.jpg.jpg);
+        background-repeat: no-repeat;
+        width: 360px;
+        background-position: bottom;
+    }
+
+    .kvast {
+        background-image: url(../img/img-kvast.jpg.jpg);
+        background-repeat: no-repeat;
+        width: 360px;
+        background-position: bottom;
     }
 
     /* flex Разметка */
@@ -836,8 +1011,13 @@
 
     .navigation-site {
         display: flex;
-        min-width: 438px;
+        width: 798px;
         justify-content: space-between;
+        padding-left: 0px;
+    }
+
+    .navigation-site li:last-child {
+        padding-left: 245px;
     }
 
     .services-list {
@@ -892,20 +1072,14 @@
         align-items: center;
     }
 
-    .maps {
-        /*карта*/
-        display: flex;
-        align-items: center;
-        padding-left: 140px;
-    }
-
     .adres {
         /*адресс*/
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         padding-left: 50px;
         box-sizing: border-box;
+        padding: 54px 47px;
     }
 
     .footer-list {
@@ -928,6 +1102,7 @@
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
+        padding-top: 15px;
     }
 
     .statistics {

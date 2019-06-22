@@ -20,12 +20,11 @@
           <li><a href="#">Клиенты</a></li>
           <li><a class="active" href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
+          <li><a href="#">Корзина</a></li>
         </ul>
       </div>
-      <div><a href="#">Корзина</a></div>
       <h1 class="navigation-list">Магазин готовых шаблонов</h1>
     </nav>
-   
   </header>
   <main class="catalog">
     <div class="score">
@@ -61,10 +60,11 @@
                 <label for="basket">Корзина</label></li>
             </ul>
           </fieldset>
-          <button>Показать</button>
+          <button><span>Показать</span></button>
         </form>
       </div>
       <section class="catalog-product">
+        <h2 class="visually-hidden "> фильтр товаров</h2>
         <section class="sorting">
           <h3>СОРТИРОВАТЬ:</h3>
           <ul>
@@ -80,53 +80,42 @@
         <div class="catalog">
           <h2 class="visually-hidden">Асортимент товаров</h2>
           <ul class="catalog-list">
-            <li><img src="img/img-sedona.jpg.jpg" width="360" height="576" alt="Сайт Sedona для туристов" tabindex="0">
-            </li>
-            <li>
+            <li class="sedona">
               <div class="popab">
                 <h3>Sedona</h3>
                 <p>Информационный сайт для туристов</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
-            <li><img src="img/img-pink.jpg.jpg" width="360" height="576" alt="Приложение Pinc для iOS и Android"
-                tabindex="0"></li>
-            <li>
+            <li class="pink">
               <div class="popab">
                 <h3>Pink App</h3>
                 <p>Продуктовый лендинг приложения для iOS и Android</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
-            <li><img src="img/img-barbershop.jpg.jpg" width="360" height="576" alt="Барбершоп Borodinski" tabindex="0">
-            </li>
-            <li>
+            <li class="barbershop">
               <div class="popab">
                 <h3>Barbershop</h3>
                 <p>Сайт салона красоты. Для мужчин, да.</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
-            <li><img src="img/img-mishka.jpg.jpg" width="360" height="576" alt="Магазин вязаных игрушек Mishka"
-                tabindex="0"></li>
-            <li>
+            <li class="mishka">
               <div class="popab">
                 <h3>MISHKA</h3>
                 <p>Интернет-магазин вязаных игрушек</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
-            <li><img src="img/img-aplus.jpg.jpg" width="360" height="576"
-                alt="Сайт для лендинг курсов повышения квалификации" tabindex="0"></li>
-            <li>
+            <li class="aplus">
               <div class="popab">
                 <h3>A Plus</h3>
                 <p>Лендинг курсов повышения квалификации</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
-            <li><img src="img/img-kvast.jpg.jpg" width="360" height="576" alt="Сайт крафтового кваса" tabindex="0"></li>
-            <li>
+            <li class="kvast">
               <div class="popab">
                 <h3>КВАСТ</h3>
                 <p>Промо-сайт производителя крафтового кваса</p>
@@ -134,27 +123,22 @@
               </div>
             </li>
           </ul>
-        </div>
-        <nav class="pagination">
-          <ul class="pagination-list">
-            <li><a href="#"><span>1</span></a></li>
-            <li><a href="#"><span>2</span></a></li>
-            <li><a href="#"><span>3</span></a></li>
-            <li><a href="#"><span>следующая</span></a></li>
+          <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">следующая</a></li>
           </ul>
-        </nav>
+        </div>
       </section>
     </div>
     <div class="maps">
       <div class="adres">
         <h2 class="visually-hidden">Как до нас добраться.</h2>
         <b class="headline">NЁRDS DESIGN STUDIO</b>
-
-        <p>191186, Санкт-Петербург,
-          ул. Б. Конюшенная, д. 19/8</p>
-
+        <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
         <p>тел. +7 (812) 275-75-75</p>
-        <button>Напишите нам</button>
+        <a href="#modal">Напишите нам</a>
       </div>
     </div>
   </main>
@@ -178,6 +162,29 @@
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
+  <form id="modal" class="letter" action="#">
+      <fieldset>
+        <div class="cap">
+          <legend>Напишите нам</legend>
+          <a href="#close"></a>
+        </div>
+        <div class="fields">
+          <div>
+            <label for="surname">Ваше имя:</label>
+            <input type="text" name="surname" id="surname" placeholder="Имя Фамилия" pattern="[А-я\s]{1,30}">
+          </div>
+          <div>
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+          </div>
+        </div>
+        <div>
+          <label for="text">Текст письма:</label>
+          <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
+          <input type="submit" value="ОТПРАВИТЬ">
+        </div>
+      </fieldset>
+    </form>
 </body>
 
 </html>
