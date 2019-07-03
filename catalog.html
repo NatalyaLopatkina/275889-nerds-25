@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Дизайн-студия Нёрдс</title>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -11,56 +12,66 @@
 <body>
   <header class="header">
     <nav class="main-navigation">
-      <div><a class="navigation-logo" href="index.html">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип nerds">
-        </a></div>
-      <div>
-        <ul class="navigation-site">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a class="active" href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
-      </div>
-      <h1 class="navigation-list">Магазин готовых шаблонов</h1>
+      <a href="index.html"><img src="img/nerds-logo.svg" alt="Логотип nerds"></a>
+      <ul class="site-navigation">
+        <li><a href="#">Студия</a></li>
+        <li><a href="#">Клиенты</a></li>
+        <li><a href="#" class="link-store">Магазин</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <ul class="user-navigation">
+        <li><a href="#">Корзина</a></li>
+      </ul>
     </nav>
   </header>
   <main class="catalog">
+    <h1 class="navigation-list">Магазин готовых шаблонов</h1>
     <div class="score">
       <div class="filter-catalog">
-        <div>
-          <h2>СТОИМОСТЬ:</h2>
-          <img src="img/v1r1e1m1e1n1o.svg" width="261" height="132" alt="vremeno">
-        </div>
         <form action="#" method="get">
+          <fieldset class="price-selection">
+            <legend>СТОИМОСТЬ:</legend>
+            <div class="price-range">
+              <div class="range-controls">
+                <div class="main-scale">
+                  <div class="selection-scale"></div>
+                </div>
+                <div class="tupbler tupbler-max"></div>
+                <div class="tupbler tupbler-min"></div>
+              </div>
+              <div class="price-controls">
+                <label for="min-price">ОТ<input type="text" name="min-price" id="min-price" value="0"></label>
+                <label for="max-price">ДО<input type="text" name="max-price" id="max-price" value="15 000"></label>
+              </div>
+            </div>
+          </fieldset>
           <fieldset class="radio">
             <legend>Сетка:</legend>
-            <ul class="filter">
-              <li><input type="radio" name="grid" id="adaptive" checked tabindex="0">
-                <label for="adaptive">Адаптивная</label></li>
-              <li><input type="radio" name="grid" id="fixed" tabindex="0">
-                <label for="fixed">Фиксированая</label></li>
-              <li><input type="radio" name="grid" id="rubber" tabindex="0">
-                <label for="rubber">Резиновая</label></li>
+            <ul class="grid">
+              <li><input type="radio" class="visually-hidden" name="grid" id="switch-1" checked tabindex="0">
+                <label for="switch-1">Адаптивная</label></li>
+              <li><input type="radio" class="visually-hidden" name="grid" id="switch-2" tabindex="0">
+                <label for="switch-2">Фиксированая </label></li>
+              <li><input type="radio" class="visually-hidden" name="grid" id="switch-3" tabindex="0">
+                <label for="switch-3">Резиновая</label></li>
             </ul>
           </fieldset>
           <fieldset class="checkbox">
             <legend>ОСОБЕННОСТИ:</legend>
-            <ul>
-              <li><input type="checkbox" name="slider" id="slider" checked tabindex="0">
+            <ul class="features">
+              <li><input type="checkbox" class="visually-hidden" name="slider" id="slider" checked tabindex="0">
                 <label for="slider">Слайдер</label></li>
-              <li><input type="checkbox" name="advantages" id="advantages" tabindex="0">
+              <li><input type="checkbox" class="visually-hidden" name="advantages" id="advantages" tabindex="0">
                 <label for="advantages">Блок преимуществ</label></li>
-              <li><input type="checkbox" name="news" id="news" checked tabindex="0">
+              <li><input type="checkbox" class="visually-hidden" name="news" id="news" checked tabindex="0">
                 <label for="news">Новости</label></li>
-              <li><input type="checkbox" name="Gallery" id="gallery" tabindex="0">
+              <li><input type="checkbox" class="visually-hidden" name="Gallery" id="gallery" tabindex="0">
                 <label for="gallery">Галерея</label></li>
-              <li><input type="checkbox" name="Basket" id="basket" tabindex="0">
+              <li><input type="checkbox" class="visually-hidden" name="Basket" id="basket" tabindex="0">
                 <label for="basket">Корзина</label></li>
             </ul>
           </fieldset>
-          <button><span>Показать</span></button>
+          <button type="submit" value="Показать"><span>Показать</span></button>
         </form>
       </div>
       <section class="catalog-product">
@@ -82,43 +93,43 @@
           <ul class="catalog-list">
             <li class="sedona">
               <div class="popab">
-                <h3>Sedona</h3>
-                <p>Информационный сайт для туристов</p>
+                <a href="#">Sedona</a>
+                <p>Информационный сайт<br>для туристов</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
             <li class="pink">
               <div class="popab">
-                <h3>Pink App</h3>
-                <p>Продуктовый лендинг приложения для iOS и Android</p>
+                <a href="#">Pink App</a>
+                <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
             <li class="barbershop">
               <div class="popab">
-                <h3>Barbershop</h3>
-                <p>Сайт салона красоты. Для мужчин, да.</p>
+                <a href="#">Barbershop</a>
+                <p>Сайт салона красоты.<br> Для мужчин, да.</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
             <li class="mishka">
               <div class="popab">
-                <h3>MISHKA</h3>
-                <p>Интернет-магазин вязаных игрушек</p>
+                <a href="#">MISHKA</a>
+                <p>Интернет-магазин<br> вязаных игрушек</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
             <li class="aplus">
               <div class="popab">
-                <h3>A Plus</h3>
-                <p>Лендинг курсов повышения квалификации</p>
+                <a href="#">A Plus</a>
+                <p>Лендинг курсов повышения<br> квалификации</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
             <li class="kvast">
               <div class="popab">
-                <h3>КВАСТ</h3>
-                <p>Промо-сайт производителя крафтового кваса</p>
+                <a href="#">КВАСТ</a>
+                <p>Промо-сайт производителя<br> крафтового кваса</p>
                 <button type="button">9 900 руб.</button>
               </div>
             </li>
@@ -135,9 +146,32 @@
     <div class="map">
       <div class="address">
         <h2>NЁRDS DESIGN STUDIO</h2>
-        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <p class="city">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <a class="phone" href="#">тел. +7 (812) 275-75-75</a>
-        <a href="#modal">Напишите нам</a>
+        <a href="#active">Напишите нам</a>
+      </div>
+      <div class="modal-window" id="active">
+        <h2 class="visually-hidden">Форма для заполнения письма</h2>
+        <a href="#close" class="visually-hidden"></a>
+        <form id="modal" class="letter" action="#" method="POST">
+          <h3>Напишите нам</h3>
+          <a href="#close"></a>
+          <div class="fields">
+            <div>
+              <label for="surname">Ваше имя:</label>
+              <input type="text" name="surname" id="surname" placeholder="Имя Фамилия" pattern="[А-я\s]{1,30}">
+            </div>
+            <div>
+              <label for="email">Ваш e-mail:</label>
+              <input type="email" name="email" id="email" placeholder="email@example.com">
+            </div>
+          </div>
+          <div class="textarea">
+            <label for="text">Текст письма:</label>
+            <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
+          </div>
+          <input type="submit" value="ОТПРАВИТЬ">
+        </form>
       </div>
     </div>
   </main>
@@ -153,31 +187,11 @@
         <a class="social-insta" href="https://www.instagram.com/"></a>
       </li>
     </ul>
-    <p><b>Давайте дружить, это выгодно!</b>Скидка 10% для друзей из социальных сетей.</p>
+    <div class="sector">
+      <h3>Давайте дружить, это выгодно!</h3>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
   </footer>
-  <section>
-    <h2 class="visually-hidden ">Форма для заполнения письма</h2>
-    <form id="modal" class="letter" action="#" method="POST">
-      <fieldset>
-        <legend>Напишите нам <a href="#close"></a></legend>
-        <div class="fields">
-          <div>
-            <label for="surname">Ваше имя:</label>
-            <input type="text" name="surname" id="surname" placeholder="Имя Фамилия" pattern="[А-я\s]{1,30}">
-          </div>
-          <div>
-            <label for="email">Ваш e-mail:</label>
-            <input type="email" name="email" id="email" placeholder="email@example.com">
-          </div>
-        </div>
-        <div>
-          <label for="text">Текст письма:</label>
-          <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
-        </div>
-        <input type="submit" value="ОТПРАВИТЬ">
-      </fieldset>
-    </form>
-  </section>
 </body>
 
 </html>
